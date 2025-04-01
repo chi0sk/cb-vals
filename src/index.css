@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0e0b18;
+  --primary: #291d45;
+  --secondary: #a82ae6;
+  --text: #e0dde5;
+  --card-bg: #1a1428;
+  --hover: #372658;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+@layer components {
+  .item-card {
+    @apply relative overflow-hidden rounded-lg bg-gradient-to-b from-[#291d45] to-[#1a1428] p-4 shadow-md transition-all hover:shadow-lg;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .item-card .overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-[rgba(26,20,40,0.7)] to-[rgba(26,20,40,0.9)];
+  }
+
+  .item-card-content {
+    @apply relative z-10;
+  }
+
+  .item-type-badge {
+    @apply mb-1 inline-block rounded-md bg-[#1a1428] px-2 py-1 text-xs uppercase text-white;
+  }
+
+  .item-name {
+    @apply mb-2 text-lg font-semibold text-white;
+  }
+
+  .item-stats {
+    @apply space-y-1 text-sm;
+  }
+
+  .item-stat {
+    @apply flex items-center justify-between rounded-md bg-[rgba(26,20,40,0.8)] p-1.5;
+  }
+
+  .item-stat-label {
+    @apply text-xs text-gray-400;
+  }
+
+  .item-stat-value {
+    @apply text-xs font-medium text-white;
+  }
+
+  .item-recent-change {
+    @apply ml-1 text-xs;
+  }
+
+  .filter-button {
+    @apply flex items-center rounded-lg bg-purple-700 px-4 py-2 text-sm font-medium text-white hover:bg-purple-800;
+  }
+
+  .search-input {
+    @apply w-full rounded-lg border border-[#291d45] bg-[#0e0b18] px-4 py-2 text-sm text-white focus:border-purple-500 focus:outline-none;
+  }
+
+  .filter-section {
+    @apply mb-4 rounded-lg bg-[#1a1428] p-4;
+  }
+
+  .filter-section-title {
+    @apply mb-2 text-sm font-medium text-white;
+  }
+
+  .filter-checkbox {
+    @apply mr-2 h-4 w-4 rounded border-gray-600 bg-[#0e0b18] text-purple-600 focus:ring-0 focus:ring-offset-0;
+  }
+
+  .filter-label {
+    @apply text-sm text-gray-300;
+  }
+
+  .sort-radio {
+    @apply mr-2 h-4 w-4 border-gray-600 bg-[#0e0b18] text-purple-600 focus:ring-0 focus:ring-offset-0;
+  }
+
+  .page-title {
+    @apply mb-6 text-center text-2xl font-bold text-white;
+  }
+
+  .value-badge-rising {
+    @apply text-green-500;
+  }
+
+  .value-badge-dropping {
+    @apply text-red-500;
+  }
+
+  .value-badge-stable {
+    @apply text-blue-500;
+  }
+
+  .value-badge-fluctuating {
+    @apply text-orange-500;
+  }
+
+  .calculator-section {
+    @apply mb-6 rounded-lg bg-[#1a1428] p-6;
+  }
+
+  .calculator-title {
+    @apply mb-4 text-xl font-semibold text-white;
+  }
+
+  .item-slot {
+    @apply flex h-24 w-full items-center justify-center rounded-lg border-2 border-dashed border-[#291d45] bg-[#1a1428] p-2;
+  }
+
+  .value-total {
+    @apply mt-2 text-right text-lg font-semibold text-white;
+  }
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 240 5.9% 10%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --ring: 240 4.9% 83.9%;
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+}
